@@ -22,7 +22,7 @@ class App extends React.Component {
         <div>
           <Blaze template="loginButtons" />
         </div>
-        <p>Hello!!</p>
+        <p>Hello!! now testing</p>
         <ul>
           {this.renderRealEstatesList()}
         </ul>
