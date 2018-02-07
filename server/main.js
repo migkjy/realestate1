@@ -1,6 +1,8 @@
 import { Meteor } from 'meteor/meteor';
-import '../imports/api/real-estates';
+
+import '../imports/api/RealEstateCollection';
+import '../imports/api/govApi';
 
 Meteor.startup(() => {
-  // code to run on server at startup
+
 });

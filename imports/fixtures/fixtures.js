@@ -1,14 +1,112 @@
-export const reLists = [
-  {
-    _id: '5a4873fa160295eaad33e6ba',
-    name: 'new1',
-  },
-  {
-    _id: '5a4873fa160295eaad33e6b2',
-    name: 'new2',
-  },
-  {
-    _id: '5a4873fa160295eaad33e6b3',
-    name: 'new3',
-  },
-];
+export const realEstateFixures = {
+  // _id: '5a4873fa160295eaad33e6ba',
+  active: true,
+  name: '한울자이빌 102호',
+  data: [
+    {
+      _id: '1',
+      active: true,
+      name: '기본정보',
+      fields: [
+        {type: 'string', name: '용도', content: '다세대'},
+        {type: 'string', name: '주소', content: '서울시 강서구 화곡동'},
+        {type: 'string', name: '상세주소', content: '56-225 한울자이빌 102호'},
+        {type: 'number', name: '대지면적', content:  29.40},
+        {type: 'number', name: '전용면적', content:  46.28},
+        {type: 'number', name: '준공연도', content:  2008},
+        {type: 'string', name: '기타', content: '2룸/1화/1베/거실주방분리'},
+      ],
+    },
+    // {
+    //   _id: '2',
+    //   active: true,
+    //   name: '매입정보',
+    //   fields: [
+    //     ['매매일', '2014-03-24'],
+    //     ['거래가격', 124120000],
+    //     ['계약일', null],
+    //     ['계약금', null],
+    //     ['중도금일', null],
+    //     ['중도금', null],
+    //     ['잔금일', null],
+    //     ['잔금액', null],
+    //     ['기타', '경매'],
+    //   ],
+    // },
+    // {
+    //   mortage: {
+    //   // 여러번 여러개가 가능하도록 변경
+    //     bank: '새마을금고',
+    //     branch: '남부천점',
+    //     amount: 111000000,
+    //     mortage_payed: 0,
+    //     balance: 111000000,
+    //     mortage_setting_amount: 0,
+    //   },
+    // },
+  ],
+};
+
+//   {
+//     _id: '5a4873fa160295eaad33e6b2',
+//     active: true,
+//     name: '대청필가 204호',
+//     info: {
+//       principal_use: '근린생활시설',
+//       address: '서울시 은평구 구산동',
+//       detailed_address: '210-18외 1필지 대청필가 204호',
+//       site_area: 25.12,
+//       floor_area: 44.57,
+//       built_at: 2011,
+//       structure: '3룸/1화/1베/거실주방',
+//     },
+//     purchase: {
+//       contract_date: '2014-03-14',
+//       price: 119760000,
+//       deposit_date: '',
+//       deposit: '0',
+//       middle_payment_date: '',
+//       middle_payment: '0',
+//       balance_date: '',
+//       balance: '0',
+//       memo: '경매',
+//     },
+//     loan: {
+//     },
+//   },
+//   {
+//     active: false,
+//     name: '상대원동 2680번지',
+//     info: {
+//       principal_use: '다가구',
+//       address: '경기도 성남시 중원구 상대원동',
+//       detailed_address: '2680번지',
+//       site_area: 66.80,
+//       floor_area: 112.45,
+//       built_at: 1989,
+//       structure: '다가구',
+//     },
+//     purchase: {
+//       contract_date: '2013-01-25',
+//       price: 146400000,
+//       deposit_date: '',
+//       deposit: '0',
+//       middle_payment_date: '',
+//       middle_payment: '0',
+//       balance_date: '',
+//       balance: '0',
+//       memo: '경매',
+//     },
+//     sell: {
+//       contract_date: '2015-10-23',
+//       price: 185000000,
+//       deposit_date: '2015-09-25',
+//       deposit: 15000000,
+//       middle_payment_date: '',
+//       middle_payment: '',
+//       balance_date: '2015-10-23',
+//       balance: 170000000,
+//       memo: '부동산 1천 수수료',
+//     },
+//   },
+// ];
