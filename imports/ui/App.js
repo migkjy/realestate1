@@ -18,15 +18,23 @@ class App extends React.Component {
     };
   }
   renderApi() {
-    // this.setState({
-    //   data: Meteor.call('api.requestData', (error, success) => success),
-    // });
-    // console.log(this.state.data);
-    this.props.apiData.map((item, index) => (<p key={index}>{item}</p>));
-    console.log('ready: ', this.props.loaded, this.props.apiData);
+    return this.state.data.map((item, index) => (<p key={index}>{JSON.stringify(item)}</p>));
   }
   renderLists = lists => lists.map((key, index) => <li key={index}>{`${key.name} : ${key.content}`}</li>)
   renderRealEstatesList = lists => lists.map(list => (<RealEstate key={list._id} list={list} />))
+  componentDidMount() {
+    Meteor.call('api.requestData', (error, success) => {
+      if (error) {
+        console.log('error', error);
+      }
+      if (success) {
+        console.log(success);
+        this.setState({
+          data: success,
+        });
+      }
+    });
+  }
   render() {
     return (
       <div >
@@ -47,23 +55,6 @@ class App extends React.Component {
   }
 }
 
-export default withTracker((props) => {
-  let ready = false;
-  const apiData = [];
-
-  Meteor.call('api.requestData', (error, success) => {
-    if (error) {
-      console.log('error', error);
-    }
-    if (success) {
-      ready = true;
-      apiData.push(success);
-      console.log(apiData);
-    }
-  });
-  return {
-    loaded: ready,
-    apiData: apiData || [],
-    realEstateList: RealEstateCollection.find({}).fetch(),
-  };
-})(App);
+export default withTracker(props => ({
+  realEstateList: RealEstateCollection.find({}).fetch(),
+}))(App);
